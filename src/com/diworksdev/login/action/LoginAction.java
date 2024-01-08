@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import com.diworksdev.login.dao.LoginDAO;
 import com.diworksdev.login.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
+
 public class LoginAction extends ActionSupport {
 //	struts2が持つActionSupportというクラスを継承します。（Actionクラスは基本的にこのクラスを継承します）
 	private String name;
@@ -25,7 +26,7 @@ public class LoginAction extends ActionSupport {
 			if(password.equals(dto.getPassword())){
 //				ユーザーが入力した「ログインID」（name）と「パスワード」(password)が、DTOからもってきた値
 //				(dto.getName()）と(dto.getPassword())にそれぞれ一致するか確認をします。
-				ret = SUCCESS ;
+				ret = SUCCESS;
 //				if文の条件を満たした場合、戻り値「ret」の内容をreturn ret; SUCCESSに書き換えます。
 			}
 		}
@@ -47,6 +48,7 @@ public class LoginAction extends ActionSupport {
 //				getterが必要です。後々の不具合を防ぐため、現段階ではgetterとsetterは両方書くようにしてください。
 	}
 }
+
 
 //① setterを定義することで、JSPでユーザーが入力した値が
 //フィールドに格納される

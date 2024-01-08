@@ -3,21 +3,21 @@ set foreign_key_checks = 0;
 drop database if exists logindb;
 create database logindb;
 use logindb;
---「user」がテーブル名になります。
+
 create table user(
 	id int,
 	user_name varchar(255),
 	password varchar(255)
 );
 
---「user」テーブルにデータを追加します。
 insert into user values
 (1,"taro","123"),
 (2,"jiro","123"),
-「user」テーブルにデータを追加します。
 (3,"hanako","123"),
 (4,"saburo","123");
 
+--「user」が
+--「user」テーブルにデータを追加します。
 --drop、create、useは、定型文なので必ずこの3行は書きましょう
 
 --drop database if exists logindb;
@@ -30,3 +30,4 @@ insert into user values
 --作成したデータベースに移動します。
 --ここも上記と同じデータベース名にします。
 
+--「user」テーブルにデータを追加します。
