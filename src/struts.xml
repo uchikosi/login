@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="com.diworksdev.login.action" extends="struts-default">
+	<!-- このプロジェクトで使うActionファイルが保存されているパッケージを宣言します。 -->
+		<action name="LoginAction" class="com.diworksdev.login.action.LoginAction" method="execute">
+		<!-- 呼び出されるJavaクラスファイルと実行するメソッドを宣言します。 -->
+			<result name="success">loginSuccess.jsp</result>
+			<!-- execute()メソッドから返ってきた値によって、次に遷移するJSPを振り分けます。 -->
+			<result name="error">loginError.jsp</result>
+		</action>
+	</package>
+</struts>
+<!-- <struts> </struts>の中身について
+①<constant name=〇〇〇 value=〇〇〇>
+Struts2の挙動を制御する設定です。name:設定名、value:設定値 をそれぞれ記述します。
+②<package name= 〇〇〇>
+Actionファイルが保存されているパッケージ名を記述します。
+③<action name= 〇〇〇>
+プロジェクト内で使うActionファイルを記述します。
+④<class= 〇〇〇>
+パッケージ名、Actionクラス名の順で記述します。
+※③で呼び出されたActionクラスの場所を記述します。
+⑤<method= 〇〇〇>
+普通はexecuteメソッドを記述します。
+※③で呼び出されたActionクラスのどのメソッドが呼ばれるかを記述します。
+⑥<result name=”success”>〇〇〇.jsp
+⑤のメソッドからSUCCESSが返された場合、ここで記述したJSPファイルに遷移します。
+⑦<result name=”error”>〇〇〇.jsp
+⑤のメソッドからERRORが返された場合、ここで記述したJSPファイルに遷移します。 -->
